@@ -1,0 +1,14 @@
+E:\Repositories\Thesis\Store.DAL\Store.DAL\bin\Debug\netcoreapp2.0\Store.Models.dll
+E:\Repositories\Thesis\Store.DAL\Store.DAL\obj\Debug\netcoreapp2.0\Store.DAL.csprojAssemblyReference.cache
+E:\Repositories\Thesis\Store.DAL\Store.DAL\obj\Debug\netcoreapp2.0\Store.DAL.csproj.CoreCompileInputs.cache
+E:\Repositories\Thesis\Store.DAL\Store.DAL\obj\Debug\netcoreapp2.0\Store.DAL.AssemblyInfoInputs.cache
+E:\Repositories\Thesis\Store.DAL\Store.DAL\obj\Debug\netcoreapp2.0\Store.DAL.AssemblyInfo.cs
+E:\Repositories\Thesis\Store.DAL\Store.DAL\bin\Debug\netcoreapp2.0\Store.DAL.deps.json
+E:\Repositories\Thesis\Store.DAL\Store.DAL\bin\Debug\netcoreapp2.0\Store.DAL.runtimeconfig.json
+E:\Repositories\Thesis\Store.DAL\Store.DAL\bin\Debug\netcoreapp2.0\Store.DAL.runtimeconfig.dev.json
+E:\Repositories\Thesis\Store.DAL\Store.DAL\bin\Debug\netcoreapp2.0\Store.DAL.dll
+E:\Repositories\Thesis\Store.DAL\Store.DAL\bin\Debug\netcoreapp2.0\Store.DAL.pdb
+E:\Repositories\Thesis\Store.DAL\Store.DAL\bin\Debug\netcoreapp2.0\Store.Models.pdb
+E:\Repositories\Thesis\Store.DAL\Store.DAL\obj\Debug\netcoreapp2.0\Store.DAL.csproj.CopyComplete
+E:\Repositories\Thesis\Store.DAL\Store.DAL\obj\Debug\netcoreapp2.0\Store.DAL.dll
+E:\Repositories\Thesis\Store.DAL\Store.DAL\obj\Debug\netcoreapp2.0\Store.DAL.pdb

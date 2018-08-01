@@ -1,0 +1,12 @@
+E:\Repositories\Thesis\WebStore.MVC\WebStore.MVC\bin\Debug\netcoreapp2.0\WebStore.MVC.deps.json
+E:\Repositories\Thesis\WebStore.MVC\WebStore.MVC\bin\Debug\netcoreapp2.0\WebStore.MVC.runtimeconfig.json
+E:\Repositories\Thesis\WebStore.MVC\WebStore.MVC\bin\Debug\netcoreapp2.0\WebStore.MVC.runtimeconfig.dev.json
+E:\Repositories\Thesis\WebStore.MVC\WebStore.MVC\bin\Debug\netcoreapp2.0\WebStore.MVC.dll
+E:\Repositories\Thesis\WebStore.MVC\WebStore.MVC\obj\Debug\netcoreapp2.0\WebStore.MVC.csprojAssemblyReference.cache
+E:\Repositories\Thesis\WebStore.MVC\WebStore.MVC\obj\Debug\netcoreapp2.0\WebStore.MVC.csproj.CoreCompileInputs.cache
+E:\Repositories\Thesis\WebStore.MVC\WebStore.MVC\obj\Debug\netcoreapp2.0\WebStore.MVC.AssemblyInfoInputs.cache
+E:\Repositories\Thesis\WebStore.MVC\WebStore.MVC\obj\Debug\netcoreapp2.0\WebStore.MVC.AssemblyInfo.cs
+E:\Repositories\Thesis\WebStore.MVC\WebStore.MVC\bin\Debug\netcoreapp2.0\WebStore.MVC.pdb
+E:\Repositories\Thesis\WebStore.MVC\WebStore.MVC\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+E:\Repositories\Thesis\WebStore.MVC\WebStore.MVC\obj\Debug\netcoreapp2.0\WebStore.MVC.dll
+E:\Repositories\Thesis\WebStore.MVC\WebStore.MVC\obj\Debug\netcoreapp2.0\WebStore.MVC.pdb

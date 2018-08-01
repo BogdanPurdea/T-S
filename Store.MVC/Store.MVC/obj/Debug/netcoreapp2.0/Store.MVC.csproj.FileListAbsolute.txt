@@ -1,0 +1,12 @@
+E:\Repositories\Thesis\Store.MVC\Store.MVC\bin\Debug\netcoreapp2.0\Store.MVC.deps.json
+E:\Repositories\Thesis\Store.MVC\Store.MVC\bin\Debug\netcoreapp2.0\Store.MVC.runtimeconfig.json
+E:\Repositories\Thesis\Store.MVC\Store.MVC\bin\Debug\netcoreapp2.0\Store.MVC.runtimeconfig.dev.json
+E:\Repositories\Thesis\Store.MVC\Store.MVC\bin\Debug\netcoreapp2.0\Store.MVC.dll
+E:\Repositories\Thesis\Store.MVC\Store.MVC\bin\Debug\netcoreapp2.0\Store.MVC.pdb
+E:\Repositories\Thesis\Store.MVC\Store.MVC\obj\Debug\netcoreapp2.0\Store.MVC.csproj.CoreCompileInputs.cache
+E:\Repositories\Thesis\Store.MVC\Store.MVC\obj\Debug\netcoreapp2.0\Store.MVC.AssemblyInfoInputs.cache
+E:\Repositories\Thesis\Store.MVC\Store.MVC\obj\Debug\netcoreapp2.0\Store.MVC.AssemblyInfo.cs
+E:\Repositories\Thesis\Store.MVC\Store.MVC\obj\Debug\netcoreapp2.0\Store.MVC.dll
+E:\Repositories\Thesis\Store.MVC\Store.MVC\obj\Debug\netcoreapp2.0\Store.MVC.pdb
+E:\Repositories\Thesis\Store.MVC\Store.MVC\obj\Debug\netcoreapp2.0\Store.MVC.csprojAssemblyReference.cache
+E:\Repositories\Thesis\Store.MVC\Store.MVC\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs

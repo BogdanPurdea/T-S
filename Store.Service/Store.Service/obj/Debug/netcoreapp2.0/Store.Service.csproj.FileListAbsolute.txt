@@ -1,0 +1,11 @@
+E:\Repositories\Thesis\Store.Service\Store.Service\bin\Debug\netcoreapp2.0\Store.Service.deps.json
+E:\Repositories\Thesis\Store.Service\Store.Service\bin\Debug\netcoreapp2.0\Store.Service.runtimeconfig.json
+E:\Repositories\Thesis\Store.Service\Store.Service\bin\Debug\netcoreapp2.0\Store.Service.runtimeconfig.dev.json
+E:\Repositories\Thesis\Store.Service\Store.Service\bin\Debug\netcoreapp2.0\Store.Service.dll
+E:\Repositories\Thesis\Store.Service\Store.Service\obj\Debug\netcoreapp2.0\Store.Service.csprojAssemblyReference.cache
+E:\Repositories\Thesis\Store.Service\Store.Service\obj\Debug\netcoreapp2.0\Store.Service.csproj.CoreCompileInputs.cache
+E:\Repositories\Thesis\Store.Service\Store.Service\obj\Debug\netcoreapp2.0\Store.Service.AssemblyInfoInputs.cache
+E:\Repositories\Thesis\Store.Service\Store.Service\obj\Debug\netcoreapp2.0\Store.Service.AssemblyInfo.cs
+E:\Repositories\Thesis\Store.Service\Store.Service\bin\Debug\netcoreapp2.0\Store.Service.pdb
+E:\Repositories\Thesis\Store.Service\Store.Service\obj\Debug\netcoreapp2.0\Store.Service.dll
+E:\Repositories\Thesis\Store.Service\Store.Service\obj\Debug\netcoreapp2.0\Store.Service.pdb
