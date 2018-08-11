@@ -13,8 +13,13 @@ namespace WebStore.MVC.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
+
         }
 
+        public ApplicationDbContext()
+        {
+        
+        }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

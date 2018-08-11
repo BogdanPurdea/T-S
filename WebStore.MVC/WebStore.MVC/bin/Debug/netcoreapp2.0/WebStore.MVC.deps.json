@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "7a490ea4be3ff8f9b9cdc32d95f45a5a8da77614"
+    "signature": "434a677c511d915c55872470527793a1f2cba4c2"
   },
   "compilationOptions": {
     "defines": [
@@ -28,7 +28,7 @@
           "Microsoft.EntityFrameworkCore.Tools": "2.0.3",
           "Microsoft.NETCore.App": "2.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.0.4",
-          "Store.Models": "1.0.0"
+          "Store.Models": "5.0.0"
         },
         "runtime": {
           "WebStore.MVC.dll": {}
@@ -2818,7 +2818,7 @@
           "lib/netstandard1.5/StackExchange.Redis.StrongName.dll": {}
         }
       },
-      "Store.Models/1.0.0": {
+      "Store.Models/5.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "2.1.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.1.1"
@@ -5754,12 +5754,12 @@
       "path": "stackexchange.redis.strongname/1.2.4",
       "hashPath": "stackexchange.redis.strongname.1.2.4.nupkg.sha512"
     },
-    "Store.Models/1.0.0": {
+    "Store.Models/5.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-tlsUcLo0ex5+Jetwn7ZLHEIwzzdEW2Xdl5w9zsbh+9PD45EFXPwSP9egjn61MVWXu7WsuASLz5YH4pKRgrumfA==",
-      "path": "store.models/1.0.0",
-      "hashPath": "store.models.1.0.0.nupkg.sha512"
+      "sha512": "sha512-PXdsNWsbn8K/hUbtaAnKz1T0vkpBdchJFOWBLwI1+/rE2NbG/bwrdfaCE42fjhgpTIXOJw8M2MTla6ERRYMDDw==",
+      "path": "store.models/5.0.0",
+      "hashPath": "store.models.5.0.0.nupkg.sha512"
     },
     "System.AppContext/4.3.0": {
       "type": "package",

@@ -50,7 +50,13 @@ namespace WebStore.MVC.Controllers
             ViewData["ReturnUrl"] = returnUrl;
             return View();
         }
-
+        [HttpGet]
+        public async Task<string> GetCurrentUserId()
+        {
+            ApplicationUser usr = await GetCurrentUserAsync();
+            return usr?.Id;
+        }
+        public Task<ApplicationUser> GetCurrentUserAsync() => _userManager.GetUserAsync(HttpContext.User);
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -65,6 +71,15 @@ namespace WebStore.MVC.Controllers
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
+                    // Resolve the user via their email
+                    var user = await _userManager.FindByEmailAsync(model.Email);
+                    // Get the roles for the user
+                    var roles = await _userManager.GetRolesAsync(user);
+                    if (roles.FirstOrDefault() == "Admin")
+                    { 
+                        _logger.LogInformation("Admin logged in.");
+                        return RedirectToLocal(returnUrl);
+                    }
                     return RedirectToLocal(returnUrl);
                 }
                 if (result.RequiresTwoFactor)

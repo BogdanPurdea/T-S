@@ -60,7 +60,8 @@ namespace WebStore.MVC.Controllers
         [HttpPost("{productId}"), ValidateAntiForgeryToken, ActionName("AddToCart")]
         public async Task<IActionResult> AddToCartPost(int customerId, int productId, AddToCartViewModel item)
         {
-            if (!ModelState.IsValid) return View(item);
+            if (!ModelState.IsValid)
+                return View(item);
             try
             {
                 await _webApiCalls.AddToCartAsync(customerId, productId, item.Quantity);

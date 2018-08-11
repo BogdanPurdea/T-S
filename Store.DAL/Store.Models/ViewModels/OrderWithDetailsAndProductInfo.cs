@@ -17,6 +17,9 @@ namespace Store.Models.ViewModels
         [DataType(DataType.Date)]
         [Display(Name = "Date Shipped")]
         public DateTime ShipDate { get; set; }
+        public string BillingAddress { get; set; }
+        public string ShippingAddress { get; set; }
+        public string CustomerPhone { get; set; }
         public IList<OrderDetailWithProductInfo> OrderDetails { get; set; }
     }
 }

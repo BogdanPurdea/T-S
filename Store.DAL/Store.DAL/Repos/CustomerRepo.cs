@@ -20,6 +20,13 @@ namespace Store.DAL.Repos
         }
         public override IEnumerable<Customer> GetAll() => Table.OrderBy(x => x.FullName);
         public override IEnumerable<Customer> GetRange(int skip, int take)
-        => GetRange(Table.OrderBy(x => x.FullName), skip, take);
+            => GetRange(Table.OrderBy(x => x.FullName), skip, take);
+        public Customer FindByUserId(string userId)
+        {
+            foreach (Customer c in GetAll())
+                if (c.UserId == userId)
+                    return c;
+            return null;
+        }
     }
 }

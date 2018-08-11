@@ -27,6 +27,19 @@ namespace Store.DAL.Repos
         public override IEnumerable<Order> GetAll() => Table.OrderByDescending(x => x.OrderDate);
         public override IEnumerable<Order> GetRange(int skip, int take)
             => GetRange(Table.OrderByDescending(x => x.OrderDate), skip, take);
+        public int UpdateAddressAndPhone(int orderId, string billingAddress, string shippingAddress, string phone, bool persist = true)
+        {
+            Order orderToUpdate = null;
+            foreach (Order order in GetAll())
+                if (order.Id == orderId)
+                {
+                    order.BillingAddress = billingAddress;
+                    order.ShippingAddress = shippingAddress;
+                    order.CustomerPhone = phone;
+                    orderToUpdate = order;
+                }
+            return base.Update(orderToUpdate, persist);
+        }
         public IEnumerable<Order> GetOrderHistory(int customerId)
             => Table
                 .Where(x => x.CustomerId == customerId)

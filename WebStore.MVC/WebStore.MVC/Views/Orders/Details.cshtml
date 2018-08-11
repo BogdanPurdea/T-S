@@ -13,22 +13,9 @@
         <strong>@Html.DisplayFor(model => model.ShipDate)</strong>
     </div>
 </div>
-<div class="row">
-    <div class="col-sm-6">
-        <label>Billing Address:</label>
-        <address>
-            <strong>John Doe</strong><br>123 State Street<br>Whatever, UT 55555<br>
-            <abbr title="Phone">P:</abbr> (123) 456-7890
-        </address>
-    </div>
-    <div class="col-sm-6">
-        <label>Shipping Address:</label>
-        <address>
-            <strong>John Doe</strong><br>
-            123 State Street<br> Whatever, UT 55555<br>
-            <abbr title="Phone">P:</abbr> (123) 456-7890
-        </address>
-    </div>
+
+<div class="text-left order-address-and-phone">
+         @Html.Partial("Update")
 </div>
 <div class="table-responsive">
     <table class="table table-bordered product-table">

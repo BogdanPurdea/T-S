@@ -3279,7 +3279,7 @@
           "lib/netstandard1.5/StackExchange.Redis.StrongName.dll": {}
         }
       },
-      "Store.Models/1.0.0": {
+      "Store.Models/5.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "2.1.1",
@@ -8668,13 +8668,13 @@
         "stackexchange.redis.strongname.nuspec"
       ]
     },
-    "Store.Models/1.0.0": {
-      "sha512": "tlsUcLo0ex5+Jetwn7ZLHEIwzzdEW2Xdl5w9zsbh+9PD45EFXPwSP9egjn61MVWXu7WsuASLz5YH4pKRgrumfA==",
+    "Store.Models/5.0.0": {
+      "sha512": "PXdsNWsbn8K/hUbtaAnKz1T0vkpBdchJFOWBLwI1+/rE2NbG/bwrdfaCE42fjhgpTIXOJw8M2MTla6ERRYMDDw==",
       "type": "package",
-      "path": "store.models/1.0.0",
+      "path": "store.models/5.0.0",
       "files": [
         "lib/netcoreapp2.0/Store.Models.dll",
-        "store.models.1.0.0.nupkg.sha512",
+        "store.models.5.0.0.nupkg.sha512",
         "store.models.nuspec"
       ]
     },
@@ -13414,7 +13414,7 @@
       "Microsoft.EntityFrameworkCore.Tools >= 2.0.3",
       "Microsoft.NETCore.App >= 2.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.4",
-      "Store.Models >= 1.0.0"
+      "Store.Models >= 5.0.0"
     ]
   },
   "packageFolders": {
@@ -13484,7 +13484,7 @@
           },
           "Store.Models": {
             "target": "Package",
-            "version": "[1.0.0, )"
+            "version": "[5.0.0, )"
           }
         },
         "imports": [

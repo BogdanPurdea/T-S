@@ -1,23 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Xunit;
 using Store.DAL.EF;
 using Store.Models.Entities;
-using Xunit;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
 namespace Store.DAL.Tests.ContextTests
 {
-    [Collection("SpyStore.DAL")]
+    [Collection("Store.DAL")]
     public class CategoryTests : IDisposable
     {
         private readonly StoreContext _db;
+
         public CategoryTests()
         {
             _db = new StoreContext();
             CleanDatabase();
         }
+
         public void Dispose()
         {
             CleanDatabase();
@@ -28,6 +30,12 @@ namespace Store.DAL.Tests.ContextTests
             _db.Database.ExecuteSqlCommand("Delete from Store.Categories");
             _db.Database.ExecuteSqlCommand($"DBCC CHECKIDENT (\"Store.Categories\", RESEED, -1);");
         }
+        [Fact]
+        public void FirstTest()
+        {
+            Assert.True(true);
+        }
+
         [Fact]
         public void ShouldAddACategoryWithDbSet()
         {

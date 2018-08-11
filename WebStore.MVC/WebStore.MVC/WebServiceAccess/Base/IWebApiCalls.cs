@@ -15,8 +15,10 @@ namespace WebStore.MVC.WebServiceAccess.Base
         Task<IList<ProductAndCategoryBase>> GetProductsForACategoryAsync(int categoryId);
         Task<IList<Customer>> GetCustomersAsync();
         Task<Customer> GetCustomerAsync(int id);
+        Task<Customer> GetCustomerAsync(string userId);
         Task<IList<Order>> GetOrdersAsync(int customerId);
         Task<OrderWithDetailsAndProductInfo> GetOrderDetailsAsync(int customerId, int orderId);
+        Task<string> UpdateOrderAddressAndPhone(int orderId, string billingAddress, string shippingAddress, string phone);
         Task<ProductAndCategoryBase> GetOneProductAsync(int productId);
         Task<IList<ProductAndCategoryBase>> GetFeaturedProductsAsync();
         Task<IList<ProductAndCategoryBase>> SearchAsync(string searchTerm);

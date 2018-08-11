@@ -28,5 +28,11 @@ namespace Store.Service.Controllers
             return orderWithDetails == null ? (IActionResult)NotFound()
             : new ObjectResult(orderWithDetails);
         }
+        [HttpPut("{orderId}")] //Required even if method name starts with Put
+        public IActionResult UpdateAddressAndPhone(int customerId, int orderId, string billingAddress, string shippingAddress, string phone)
+        {
+            Repo.UpdateAddressAndPhone(orderId, billingAddress, shippingAddress, phone);
+            return NoContent();
+        }
     }
 }

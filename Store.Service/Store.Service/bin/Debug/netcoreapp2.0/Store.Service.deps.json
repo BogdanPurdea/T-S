@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "ffe219411b6b23754e487a988eae32b60760dfe2"
+    "signature": "ef7be52f1b07e0584ac344513f430e602e80938b"
   },
   "compilationOptions": {
     "defines": [
@@ -27,8 +27,8 @@
           "Microsoft.EntityFrameworkCore": "2.1.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.1.1",
           "Microsoft.NETCore.App": "2.0.0",
-          "Store.DAL": "1.0.0",
-          "Store.Models": "1.0.0"
+          "Store.DAL": "5.0.0",
+          "Store.Models": "5.0.0"
         },
         "runtime": {
           "Store.Service.dll": {}
@@ -2697,7 +2697,7 @@
           "lib/netstandard1.5/StackExchange.Redis.StrongName.dll": {}
         }
       },
-      "Store.DAL/1.0.0": {
+      "Store.DAL/5.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "2.1.1",
           "Microsoft.EntityFrameworkCore.Design": "2.1.1",
@@ -2707,7 +2707,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.1.6",
           "Microsoft.EntityFrameworkCore.Tools": "2.1.1",
           "Microsoft.NETCore.App": "2.0.0",
-          "Store.Models": "1.0.0",
+          "Store.Models": "5.0.0",
           "System.Linq.Queryable": "4.3.0"
         },
         "runtime": {
@@ -2717,7 +2717,7 @@
           "lib/netcoreapp2.0/Store.DAL.dll": {}
         }
       },
-      "Store.Models/1.0.0": {
+      "Store.Models/5.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "2.1.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.1.1"
@@ -5461,19 +5461,19 @@
       "path": "stackexchange.redis.strongname/1.2.4",
       "hashPath": "stackexchange.redis.strongname.1.2.4.nupkg.sha512"
     },
-    "Store.DAL/1.0.0": {
+    "Store.DAL/5.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-bEQR2VETW+rXkoH17eU1Vk1BANANP3WqI7yb/OamG9bu243NltZOlewgdEtd2uIf+J5x9DphaOSP2HIlu4qIww==",
-      "path": "store.dal/1.0.0",
-      "hashPath": "store.dal.1.0.0.nupkg.sha512"
+      "sha512": "sha512-Cek7DzhB9IKrRUAzclvDjRkq1LKCOv+e0fhmURBoUGJgJAdHqyLJm8AH0YPmFM2af+1W/7MIKJ+xvk8rlr0vsg==",
+      "path": "store.dal/5.0.0",
+      "hashPath": "store.dal.5.0.0.nupkg.sha512"
     },
-    "Store.Models/1.0.0": {
+    "Store.Models/5.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-tlsUcLo0ex5+Jetwn7ZLHEIwzzdEW2Xdl5w9zsbh+9PD45EFXPwSP9egjn61MVWXu7WsuASLz5YH4pKRgrumfA==",
-      "path": "store.models/1.0.0",
-      "hashPath": "store.models.1.0.0.nupkg.sha512"
+      "sha512": "sha512-PXdsNWsbn8K/hUbtaAnKz1T0vkpBdchJFOWBLwI1+/rE2NbG/bwrdfaCE42fjhgpTIXOJw8M2MTla6ERRYMDDw==",
+      "path": "store.models/5.0.0",
+      "hashPath": "store.models.5.0.0.nupkg.sha512"
     },
     "System.AppContext/4.3.0": {
       "type": "package",

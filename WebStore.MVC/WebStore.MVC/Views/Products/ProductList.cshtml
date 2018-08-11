@@ -11,6 +11,10 @@
     }
 </div>
 <h3>@ViewBag.Header</h3>
+@if (ViewBag.IsAdmin == true)
+{
+    <Button class="btn btn-primary btn-large btnCustom5" id="add">Add</Button>
+}
 <div class="row">
     @for (int x = 0; x < Model.Count(); x++)
     {

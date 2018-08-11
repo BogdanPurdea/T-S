@@ -10,5 +10,6 @@ namespace Store.DAL.Repos.Interfaces
     {
         IEnumerable<Order> GetOrderHistory(int customerId);
         OrderWithDetailsAndProductInfo GetOneWithDetails(int customerId, int orderId);
+        int UpdateAddressAndPhone(int orderId, string billingAddress, string shippingAddress, string phone, bool persist = true);
     }
 }

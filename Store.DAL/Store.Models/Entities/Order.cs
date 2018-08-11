@@ -19,6 +19,9 @@ namespace Store.Models.Entities
         public DateTime ShipDate { get; set; }
         [ForeignKey("CustomerId")]
         public Customer Customer { get; set; }
+        public string BillingAddress { get; set; }
+        public string ShippingAddress { get; set; }
+        public string CustomerPhone { get; set; }
         [InverseProperty("Order")]
         public List<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
         [Display(Name = "Total")]

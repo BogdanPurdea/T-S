@@ -32,9 +32,25 @@ namespace WebStore.MVC.Controllers
             ViewBag.Title = "Order Details";
             ViewBag.Header = "Order Details";
             OrderWithDetailsAndProductInfo orderDetails =
-            await _webApiCalls.GetOrderDetailsAsync(customerId, orderId);
+             await _webApiCalls.GetOrderDetailsAsync(customerId, orderId);
             if (orderDetails == null) return NotFound();
             return View(orderDetails);
+        }
+        [HttpPost("{id}"), ValidateAntiForgeryToken]
+        public async Task<IActionResult> Update(int customerId, int id, string billingAddress, string shippingAddress, string phone)
+        {
+            try
+            {
+                await _webApiCalls.UpdateOrderAddressAndPhone(id, billingAddress, shippingAddress, phone);
+                OrderWithDetailsAndProductInfo orderDetails =
+                    await _webApiCalls.GetOrderDetailsAsync(customerId, id);
+                return RedirectToAction(nameof(Details), new { customerId, id });
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError(string.Empty, "An error occurred updating the address. Please reload the page and try again.");
+                return RedirectToAction(nameof(Details), new { customerId, id });
+            }
         }
     }
 }

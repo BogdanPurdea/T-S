@@ -81,6 +81,12 @@ namespace WebStore.MVC.WebServiceAccess
             //http://localhost:44315/api/customer/1
             return await GetItemAsync<Customer>($"{CustomerBaseUri}{id}");
         }
+        public async Task<Customer> GetCustomerAsync(string userId)
+        {
+            //Get One customer: http://localhost:44315/api/customer/{userId}
+            //http://localhost:44315/api/customer/0b79191b-b587-405c-ae2a-e51a
+            return await GetItemAsync<Customer>($"{CustomerBaseUri}{userId}");
+        }
         public async Task<IList<ProductAndCategoryBase>> GetFeaturedProductsAsync()
         {
             // http://localhost:44315/api/product/featured
@@ -108,8 +114,7 @@ namespace WebStore.MVC.WebServiceAccess
             var uri = $"{ServiceAddress}api/search/{searchTerm}";
             return await GetItemListAsync<ProductAndCategoryBase>(uri);
         }
-        public async Task RemoveCartItemAsync(
-        int customerId, int shoppingCartRecordId, byte[] timeStamp)
+        public async Task RemoveCartItemAsync(int customerId, int shoppingCartRecordId, byte[] timeStamp)
         {
             //Remove Cart Item:
             // http://localhost:44315/api/shoppingcart/{customerId}/{id}/{TimeStamp} HTTPDelete
@@ -122,6 +127,12 @@ namespace WebStore.MVC.WebServiceAccess
         {
             //http://localhost:44315/api/category
             return await GetItemListAsync<Category>(CategoryBaseUri);
+        }
+        public async Task<string> UpdateOrderAddressAndPhone(int orderId, string billingAddress, string shippingAddress, string phone)
+        {
+            string uri = $"{OrdersBaseUri}{orderId}";
+            string json = $"{{\"BillingAddress\":{billingAddress},\"ShippingAddress\":{shippingAddress},\"Phone\":{phone}}}";
+            return await SubmitPostRequestAsync(uri, json);
         }
     }
 }

@@ -30,5 +30,16 @@ namespace Store.Service.Controllers
             }
             return new ObjectResult(item);
         }
+
+        [HttpGet("{userId}")]
+        public IActionResult Get(string userId)
+        {
+            var item = Repo.FindByUserId(userId);
+            if (item == null)
+            {
+                return NotFound();
+            }
+            return new ObjectResult(item);
+        }
     }
 }

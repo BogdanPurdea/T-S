@@ -58,6 +58,8 @@ namespace Store.DAL.EF.Migrations
                         .IsConcurrencyToken()
                         .ValueGeneratedOnAddOrUpdate();
 
+                    b.Property<string>("UserId");
+
                     b.HasKey("Id");
 
                     b.HasIndex("EmailAddress")
@@ -73,7 +75,11 @@ namespace Store.DAL.EF.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("BillingAddress");
+
                     b.Property<int>("CustomerId");
+
+                    b.Property<string>("CustomerPhone");
 
                     b.Property<DateTime>("OrderDate")
                         .ValueGeneratedOnAdd()
@@ -89,6 +95,8 @@ namespace Store.DAL.EF.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime")
                         .HasDefaultValueSql("getdate()");
+
+                    b.Property<string>("ShippingAddress");
 
                     b.Property<byte[]>("TimeStamp")
                         .IsConcurrencyToken()

@@ -8,5 +8,7 @@ namespace Store.DAL.Repos.Interfaces
 {
     public interface ICustomerRepo : IRepo<Customer>
     {
+        Customer FindByUserId(string userId);
+
     }
 }

@@ -14,6 +14,8 @@ using WebStore.MVC.Services;
 using WebStore.MVC.Configuration;
 using WebStore.MVC.WebServiceAccess;
 using WebStore.MVC.WebServiceAccess.Base;
+using WebStore.MVC.Filters;
+using WebStore.MVC.Helpers;
 
 namespace WebStore.MVC
 {
@@ -32,6 +34,8 @@ namespace WebStore.MVC
             services.AddSingleton(_ => Configuration);
             services.AddSingleton<IWebServiceLocator, WebServiceLocator>();
             services.AddSingleton<IWebApiCalls, WebApiCalls>();
+            services.AddSingleton<ICustomerHelper, CustomerHelper>();
+            services.AddSingleton<IUserHelper, UserHelper>();
 
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
@@ -42,8 +46,11 @@ namespace WebStore.MVC
 
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
-
-            services.AddMvc();
+            
+            services.AddMvc(config => {
+                config.Filters.Add(
+                    new CustomerFilter(services.BuildServiceProvider().GetService<ICustomerHelper>(), services.BuildServiceProvider().GetService<IUserHelper>()));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

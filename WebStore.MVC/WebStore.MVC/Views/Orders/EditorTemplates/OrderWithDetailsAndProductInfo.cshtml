@@ -1,0 +1,15 @@
+﻿@model OrderWithDetailsAndProductInfo
+<form asp-controller="Orders" asp-action="Update" id="updateAddressForm" method="post"
+      asp-route-customerId="@Model.CustomerId" asp-route-id="@Model.Id">
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="TimeStamp" />
+    <input type="hidden" asp-for="CustomerId" />
+    <input type="hidden" asp-for="OrderTotal" />
+    <input type="hidden" asp-for="OrderDate" />
+    <input type="hidden" asp-for="ShipDate" />
+    <input type="hidden" asp-for="OrderDetails" />
+    BillingAddress: <input asp-for="BillingAddress" class="customer_billing_address" /> 
+    ShippingAddress: <input asp-for="ShippingAddress" class="customer_shipping_address" /> 
+    Phone: <input asp-for="CustomerPhone" class="customer_phone" /> 
+    <button class="btn btn-link btn-sm">Confirm address and phone</button>
+</form>

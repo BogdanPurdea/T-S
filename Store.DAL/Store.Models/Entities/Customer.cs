@@ -24,5 +24,6 @@ namespace Store.Models.Entities
         [InverseProperty(nameof(ShoppingCartRecord.Customer))]
         public virtual List<ShoppingCartRecord> ShoppingCartRecords { get; set; }
             = new List<ShoppingCartRecord>();
+        public string UserId { get; set; }
     }
 }

@@ -1,0 +1,11 @@
+﻿@model OrderWithDetailsAndProductInfo
+
+@if (Model.BillingAddress == null || Model.ShippingAddress == null || Model.CustomerPhone == null)
+{
+    @Html.DisplayForModel()
+    @Html.EditorForModel()
+}
+else
+{
+    @Html.DisplayForModel()
+}
