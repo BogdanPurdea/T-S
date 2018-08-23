@@ -54,7 +54,8 @@ namespace Store.Service
             {
                 options.AddPolicy("AllowAll", builder =>
                 {
-                    builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin().AllowCredentials();
+                    builder.AllowAnyHeader().AllowAnyMethod()
+                    .AllowAnyOrigin().AllowCredentials();
                 });
             });
             //NOTE: Did not disable mixed mode running here
@@ -70,7 +71,8 @@ namespace Store.Service
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, 
+            ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
@@ -80,7 +82,8 @@ namespace Store.Service
 
             if (env.IsDevelopment())
             {
-                using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
+                using (var serviceScope = app.ApplicationServices
+                    .GetRequiredService<IServiceScopeFactory>().CreateScope())
                 {
                     StoreDataInitializer.InitializeData(serviceScope.ServiceProvider);
                 }

@@ -37,7 +37,8 @@ namespace WebStore.MVC.WebServiceAccess.Base
                     var response = await client.GetAsync(uri);
                     if (!response.IsSuccessStatusCode)
                     {
-                        throw new Exception($"The Call to {uri} failed. Status code: {response.StatusCode}");
+                        throw new Exception($"The Call to {uri} failed. Status code: " +
+                            $"{response.StatusCode}");
                     }
                     return await response.Content.ReadAsStringAsync();
                 }
@@ -50,7 +51,8 @@ namespace WebStore.MVC.WebServiceAccess.Base
             }
         }
 
-        internal async Task<T> GetItemAsync<T>(string uri) where T : class, new()
+        internal async Task<T> GetItemAsync<T>(string uri) 
+            where T : class, new()
         {
             try
             {
@@ -65,11 +67,13 @@ namespace WebStore.MVC.WebServiceAccess.Base
             }
         }
 
-        internal async Task<IList<T>> GetItemListAsync<T>(string uri) where T : class, new()
+        internal async Task<IList<T>> GetItemListAsync<T>(string uri)
+            where T : class, new()
         {
             try
             {
-                return JsonConvert.DeserializeObject<IList<T>>(await GetJsonFromGetResponseAsync(uri));
+                return JsonConvert.DeserializeObject<IList<T>>(
+                    await GetJsonFromGetResponseAsync(uri));
             }
             catch (Exception ex)
             {
@@ -79,14 +83,16 @@ namespace WebStore.MVC.WebServiceAccess.Base
             }
         }
 
-        protected static async Task<string> ExecuteRequestAndProcessResponse(string uri, Task<HttpResponseMessage> task)
+        protected static async Task<string> ExecuteRequestAndProcessResponse(string uri,
+            Task<HttpResponseMessage> task)
         {
             try
             {
                 var response = await task;
                 if (!response.IsSuccessStatusCode)
                 {
-                    throw new Exception($"The Call to {uri} failed. Status code: {response.StatusCode}");
+                    throw new Exception($"The Call to {uri} failed. Status code:" +
+                        $" {response.StatusCode}");
                 }
                 return await response.Content.ReadAsStringAsync();
             }
@@ -116,7 +122,8 @@ namespace WebStore.MVC.WebServiceAccess.Base
         {
             using (var client = new HttpClient())
             {
-                Task<HttpResponseMessage> task = client.PutAsync(uri, CreateStringContent(json));
+                Task<HttpResponseMessage> task = client.PutAsync(uri,
+                    CreateStringContent(json));
                 return await ExecuteRequestAndProcessResponse(uri, task);
             }
         }

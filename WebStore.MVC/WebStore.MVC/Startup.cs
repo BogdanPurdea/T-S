@@ -31,6 +31,7 @@ namespace WebStore.MVC
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Add application services.
             services.AddSingleton(_ => Configuration);
             services.AddSingleton<IWebServiceLocator, WebServiceLocator>();
             services.AddSingleton<IWebApiCalls, WebApiCalls>();
@@ -38,18 +39,19 @@ namespace WebStore.MVC
             services.AddSingleton<IUserHelper, UserHelper>();
 
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(Configuration
+                    .GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
-            // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
             
             services.AddMvc(config => {
-                config.Filters.Add(
-                    new CustomerFilter(services.BuildServiceProvider().GetService<ICustomerHelper>(), services.BuildServiceProvider().GetService<IUserHelper>()));
+                config.Filters.Add(new CustomerFilter(
+                    services.BuildServiceProvider().GetService<ICustomerHelper>(), 
+                    services.BuildServiceProvider().GetService<IUserHelper>()));
             });
         }
 

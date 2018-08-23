@@ -4,9 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using Store.Models.Entities;
 using Store.Models.ViewModels.Base;
 using WebStore.MVC.Models;
+using WebStore.MVC.ViewModels;
 using WebStore.MVC.WebServiceAccess.Base;
 
 namespace WebStore.MVC.Controllers
@@ -30,6 +32,12 @@ namespace WebStore.MVC.Controllers
         {
             return RedirectToAction(nameof(Featured));
         }
+        [HttpGet]
+        public ActionResult Add()
+        {
+            return View();
+        }
+
         public ActionResult Details(int id)
         {
             return RedirectToAction(
@@ -37,12 +45,14 @@ namespace WebStore.MVC.Controllers
             nameof(CartController).Replace("Controller", ""),
             new { customerId = ViewBag.CustomerId, productId = id, cameFromProducts = true });
         }
-        internal async Task<IActionResult> GetListOfProducts(int id = -1, bool featured = false, string searchString = "")
+        internal async Task<IActionResult> GetListOfProducts(int id = -1, 
+            bool featured = false, string searchString = "")
         {
             IList<ProductAndCategoryBase> prods;
             if (featured)
             {
                 prods = await _webApiCalls.GetFeaturedProductsAsync();
+
             }
             else if (!string.IsNullOrEmpty(searchString))
             {
@@ -105,12 +115,41 @@ namespace WebStore.MVC.Controllers
             ViewBag.Featured = false;
             return await GetListOfProducts(searchString: searchString);
         }
-        /*[HttpPost("{id}"), ValidateAntiForgeryToken]
-        public async Task<IActionResult> Update(int id)
-        {           
-           await _webApiCalls.UpdateProductAsync(newItem);
-           var updatedItem = await _webApiCalls.GetCartRecordAsync(customerId, item.ProductId);
-           return PartialView(newViewModel);
-        }*/
+        
+        [HttpPost, ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddPost(ProductAndCategoryBase item)
+        {
+            try
+            {
+                await _webApiCalls.AddProductAsync(item.CategoryId, item.Description, item.ModelName, item.ModelNumber, item.ProductImage, item.ProductImageLarge, item.ProductImageThumb, item.UnitCost, item.CurrentPrice, item.UnitsInStock, item.IsFeatured);
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError(string.Empty, "There was an error adding the product.");
+            }
+            return RedirectToAction(nameof(Index));
+        }
+        [Route("[controller]/[action]")]
+        [HttpPost("{id}"), ValidateAntiForgeryToken]
+        public async Task<IActionResult> Update(int id, string timeStampString, ProductAndCategoryBase item)
+        {
+            item.TimeStamp = JsonConvert.DeserializeObject<byte[]>($"\"{timeStampString}\"");
+            try
+            {
+                await _webApiCalls.UpdateProductAsync(item);
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError(string.Empty, "An error occurred updating the product.");
+            }
+            return RedirectToAction(nameof(Index));
+        }
+        [Route("[controller]/[action]")]
+        [HttpPost("{id}"), ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(int id, ProductAndCategoryBase item)
+        {
+            await _webApiCalls.RemoveProductAsync(id, item.TimeStamp);
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

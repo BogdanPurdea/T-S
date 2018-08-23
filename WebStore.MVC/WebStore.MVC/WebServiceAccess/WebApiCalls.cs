@@ -19,15 +19,18 @@ namespace WebStore.MVC.WebServiceAccess
         public async Task<IList<CartRecordWithProductInfo>> GetCartAsync(int customerId)
         {
             // http://localhost:44315/api/ShoppingCart/0
-            return await GetItemListAsync<CartRecordWithProductInfo>($"{CartBaseUri}{customerId}");
+            return await GetItemListAsync<CartRecordWithProductInfo>(
+                $"{CartBaseUri}{customerId}");
         }
-        public async Task<CartRecordWithProductInfo> GetCartRecordAsync(int customerId, int productId)
+        public async Task<CartRecordWithProductInfo> GetCartRecordAsync(int customerId,
+            int productId)
         {
             // http://localhost:44315/api/ShoppingCart/0/0
             return await GetItemAsync<CartRecordWithProductInfo>(
-            $"{CartBaseUri}{customerId}/{productId}");
+                $"{CartBaseUri}{customerId}/{productId}");
         }
-        public async Task<string> AddToCartAsync(int customerId, int productId, int quantity)
+        public async Task<string> AddToCartAsync(int customerId, int productId,
+            int quantity)
         {
             //http://localhost:44315/api/shoppingcart/{customerId} HTTPPost
             //Note: ProductId and Quantity in the body
@@ -63,8 +66,7 @@ namespace WebStore.MVC.WebServiceAccess
             //http://localhost:44315/api/category/{id}
             return await GetItemAsync<Category>($"{CategoryBaseUri}{id}");
         }
-        public async Task<IList<ProductAndCategoryBase>> GetProductsForACategoryAsync(int
-        categoryId)
+        public async Task<IList<ProductAndCategoryBase>> GetProductsForACategoryAsync(int categoryId)
         {
             // http://localhost:44315/api/category/{categoryId}/products
             var uri = $"{CategoryBaseUri}{categoryId}/products";
@@ -97,13 +99,27 @@ namespace WebStore.MVC.WebServiceAccess
             // http://localhost:44315/api/product/{id}
             return await GetItemAsync<ProductAndCategoryBase>($"{ProductBaseUri}{productId}");
         }
+        public async Task<string> AddProductAsync(int categoryId, string description, string modelName, string modelNumber, string productImage, string productImageLarge, string productImageThumb, decimal unitCost, decimal currentPrice, int unitsInStock, bool isFeatured)
+        {
+            string uri = $"{ProductBaseUri}";
+            string json = $"{{\"CategoryId\":{categoryId},\"Description\":\"{description}\",\"ModelName\":\"{modelName}\"," +
+                $"\"ModelNumber\":\"{modelNumber}\",\"ProductImage\":\"{productImage}\",\"ProductImageLarge\":\"{productImageLarge}\"," +
+                $"\"ProductImageThumb\":\"{productImageThumb}\",\"UnitCost\":{unitCost},\"CurrentPrice\":{currentPrice}," +
+                $"\"UnitsInStock\":{unitsInStock},\"IsFeatured\":\"{isFeatured}\"}}";
+            return await SubmitPostRequestAsync(uri, json);
+        }
+        public async Task<string> UpdateProductAsync(ProductAndCategoryBase item)
+        {
+            string uri = $"{ProductBaseUri}/{item.Id}";
+            var json = JsonConvert.SerializeObject(item);
+            return await SubmitPutRequestAsync(uri, json);
+        }
         public async Task<IList<Order>> GetOrdersAsync(int customerId)
         {
             //Get Order History: http://localhost:44315/api/orders/{customerId}
             return await GetItemListAsync<Order>($"{OrdersBaseUri}{customerId}");
         }
-        public async Task<OrderWithDetailsAndProductInfo> GetOrderDetailsAsync(
-        int customerId, int orderId)
+        public async Task<OrderWithDetailsAndProductInfo> GetOrderDetailsAsync(int customerId, int orderId)
         {
             //Get Order Details: http://localhost:44315/api/orders/{customerId}/{orderId}
             var url = $"{OrdersBaseUri}{customerId}/{orderId}";
@@ -123,16 +139,26 @@ namespace WebStore.MVC.WebServiceAccess
             var uri = $"{CartBaseUri}{customerId}/{shoppingCartRecordId}/{timeStampString}";
             await SubmitDeleteRequestAsync(uri);
         }
+        public async Task RemoveProductAsync(int productId, byte[] timeStamp)
+        {
+            var timeStampString = JsonConvert.SerializeObject(timeStamp);
+            var uri = $"{ProductBaseUri}/{productId}/{timeStampString}";
+            await SubmitDeleteRequestAsync(uri);
+        }
         public async Task<IList<Category>> GetCategoriesAsync()
         {
             //http://localhost:44315/api/category
             return await GetItemListAsync<Category>(CategoryBaseUri);
         }
-        public async Task<string> UpdateOrderAddressAndPhone(int orderId, string billingAddress, string shippingAddress, string phone)
+        public async Task<string> UpdateOrderAddressAndPhone(int customerId, int orderId, string billingAddress, string shippingAddress, string phone)
         {
-            string uri = $"{OrdersBaseUri}{orderId}";
-            string json = $"{{\"BillingAddress\":{billingAddress},\"ShippingAddress\":{shippingAddress},\"Phone\":{phone}}}";
-            return await SubmitPostRequestAsync(uri, json);
-        }
+            //http://localhost:44315/api/orders/{customerId}/{orderId} HTTPPut
+            //Note: BillingAddress, ShippingAddress and Phone in the body
+            //http://localhost:44315/api/shoppingcart/0/1 {"BillingAddress":b_addr,"ShippingAddress":s_addr,"CustomerPhone":1234567890}
+            // Content-Type:application/json
+            string uri = $"{OrdersBaseUri}{customerId}/{orderId}";
+            string json = $"{{\"BillingAddress\":\"{billingAddress}\",\"ShippingAddress\":\"{shippingAddress}\",\"CustomerPhone\":\"{phone}\"}}";
+            return await SubmitPutRequestAsync(uri, json);
+        }        
     }
 }

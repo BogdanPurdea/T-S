@@ -1,0 +1,27 @@
+﻿@model ProductAndCategoryBase
+
+<form asp-controller="Products" asp-action="Update" asp-route-id="@Model.Id" id="updateForm" method="post"
+      data-ajax="true" data-ajax-mode="REPLACE-WITH" data-ajax-update="#row_@Model.Id"
+      data-ajax-method="POST" data-ajax-success="success" data-ajax-failure="error"
+      data-ajax-complete="complete">
+    CategoryId: <input asp-for="CategoryId" class="category-id" value="@Model.CategoryId" /><br />
+    Description: <input asp-for="Description" class="description" value="@Model.Description" /><br />
+    Model Name: <input asp-for="ModelName" class="model-name" value="@Model.ModelName" /><br />
+    Model Number: <input asp-for="ModelNumber" class="model-number" value="@Model.ModelNumber" /><br>
+    Product Image: <input asp-for="ProductImage" class="product-image" value="@Model.ProductImage" /><br />
+    Product Image Large: <input asp-for="ProductImageLarge" class="product-image-large" value="@Model.ProductImageLarge" /><br />
+    Product Image Thumb: <input asp-for="ProductImageThumb" class="product-image-thumb" value="@Model.ProductImageThumb" /><br />
+    UnitCost: <input asp-for="UnitCost" class="unit-cost" value="@Model.UnitCost" /><br />
+    Current Price: <input asp-for="CurrentPrice" class="current-price" value="@Model.CurrentPrice" /><br />
+    Units In Stock: <input asp-for="UnitsInStock" class="units-in-stock" value="@Model.UnitsInStock" /><br />
+    Is Featured: <input asp-for="IsFeatured" class="is-featured" value="@Model.IsFeatured" /><br />
+    <input type="hidden" name="@nameof(Model.TimeStampString)"
+           id="@nameof(Model.TimeStampString)" value="@Model.TimeStampString" />
+    <button class="btn btn-primary btn-sm">Update</button>
+</form>
+
+<form asp-controller="Products" asp-action="Delete" asp-route-id="@Model.Id" id="deleteForm" method="post">
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="TimeStamp" />
+    <button class="btn btn-primary btn-sm">Remove</button>
+</form>

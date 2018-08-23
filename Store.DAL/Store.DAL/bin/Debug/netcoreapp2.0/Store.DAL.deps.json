@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "3fe42e66a73d40d24bd9dcb52ff10b04590b0aea"
+    "signature": "f2fc6d9da776460ccc61a6dd76433550de9602e2"
   },
   "compilationOptions": {},
   "targets": {
@@ -15,7 +15,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "2.1.1",
           "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.1.6",
           "Microsoft.EntityFrameworkCore.Tools": "2.1.1",
-          "Store.Models": "1.0.0",
+          "Store.Models": "8.0.0",
           "System.Linq.Queryable": "4.3.0"
         },
         "runtime": {
@@ -202,6 +202,11 @@
             "rid": "win",
             "assetType": "runtime"
           }
+        }
+      },
+      "Newtonsoft.Json/11.0.2": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "Remotion.Linq/2.2.0": {
@@ -513,10 +518,11 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "Store.Models/1.0.0": {
+      "Store.Models/8.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "2.1.1",
-          "Microsoft.EntityFrameworkCore.SqlServer": "2.1.1"
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.1.1",
+          "Newtonsoft.Json": "11.0.2"
         },
         "runtime": {
           "Store.Models.dll": {}
@@ -690,6 +696,13 @@
       "sha512": "sha512-vduxuHEqRgRrTE8wYG8Wxj/+6wwzddOmZzjKZx6rFMc/91aUBxI5etAFYxesoNaIja5NpgSTcnk6cN8BeYXf9A==",
       "path": "microsoft.win32.registry/4.5.0",
       "hashPath": "microsoft.win32.registry.4.5.0.nupkg.sha512"
+    },
+    "Newtonsoft.Json/11.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+      "path": "newtonsoft.json/11.0.2",
+      "hashPath": "newtonsoft.json.11.0.2.nupkg.sha512"
     },
     "Remotion.Linq/2.2.0": {
       "type": "package",
@@ -943,7 +956,7 @@
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
     },
-    "Store.Models/1.0.0": {
+    "Store.Models/8.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

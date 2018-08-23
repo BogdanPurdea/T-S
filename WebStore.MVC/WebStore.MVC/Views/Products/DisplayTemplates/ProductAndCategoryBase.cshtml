@@ -5,17 +5,20 @@
         <div class="price">@Html.DisplayFor(x => x.CurrentPrice)</div>
         <div class="title-container">
             <h5>
-                <a asp-controller="Products" asp-action="Details" asp-route-id="@Model.Id">
+                <a asp-controller="Products" asp-action="Details" 
+                   asp-route-id="@Model.Id">
                     @Html.DisplayFor(x => x.ModelName)
                 </a>
             </h5>
         </div>
         <div class="model-number">
-            <span class="text-muted">Model Number:</span> @Html.DisplayFor(x => x.ModelNumber)
+            <span class="text-muted">Model Number:</span> 
+            @Html.DisplayFor(x => x.ModelNumber)
         </div>
         @if (ViewBag.ShowCategory)
         {
-            <a asp-controller="Products" asp-action="ProductList" asp-route-id="@Model.CategoryId">@Model.CategoryName</a>
+            <a asp-controller="Products" asp-action="ProductList" 
+               asp-route-id="@Model.CategoryId">@Model.CategoryName</a>
         }
         @if (ViewBag.IsAdmin == false)
         {

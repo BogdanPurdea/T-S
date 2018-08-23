@@ -1,0 +1,20 @@
+﻿@model ProductAndCategoryBase
+
+<h3>Add a product</h3>
+<div class="text-left product-details">
+    <form asp-controller="Products" asp-action="AddPost" id="addForm" method="post">
+        CategoryId: <input asp-for="CategoryId" class="category-id" /><br />
+        Description: <input asp-for="Description" class="description" /><br />
+        Model Name: <input asp-for="ModelName" class="model-name" /><br />
+        Model Number: <input asp-for="ModelNumber" class="model-number" /><br>
+        Product Image: <input asp-for="ProductImage" class="product-image" /><br />
+        Product Image Large: <input asp-for="ProductImageLarge" class="product-image-large" /><br />
+        Product Image Thumb: <input asp-for="ProductImageThumb" class="product-image-thumb" /><br />
+        UnitCost: <input asp-for="UnitCost" class="unit-cost" /><br />
+        Current Price: <input asp-for="CurrentPrice" class="current-price" /><br />
+        Units In Stock: <input asp-for="UnitsInStock" class="units-in-stock" /><br />
+        Is Featured: <input asp-for="IsFeatured" class="is-featured" /><br />
+
+        <button class="btn btn-link btn-sm">Add</button>
+    </form>
+</div>

@@ -10,7 +10,7 @@ namespace Store.Models.Entities
     [Table("Products", Schema = "Store")]
     public class Product : EntityBase
     {
-        [MaxLength(3800)]
+        [MaxLength(1000)]
         public string Description { get; set; }
         [MaxLength(50)]
         public string ModelName { get; set; }

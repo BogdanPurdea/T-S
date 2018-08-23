@@ -1,0 +1,13 @@
+E:\Repositories\Thesis\Store.Service\Store.Service.Tests\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+E:\Repositories\Thesis\Store.Service\Store.Service.Tests\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+E:\Repositories\Thesis\Store.Service\Store.Service.Tests\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
+E:\Repositories\Thesis\Store.Service\Store.Service.Tests\bin\Debug\netcoreapp2.0\Store.Service.Tests.deps.json
+E:\Repositories\Thesis\Store.Service\Store.Service.Tests\bin\Debug\netcoreapp2.0\Store.Service.Tests.runtimeconfig.json
+E:\Repositories\Thesis\Store.Service\Store.Service.Tests\bin\Debug\netcoreapp2.0\Store.Service.Tests.runtimeconfig.dev.json
+E:\Repositories\Thesis\Store.Service\Store.Service.Tests\bin\Debug\netcoreapp2.0\Store.Service.Tests.dll
+E:\Repositories\Thesis\Store.Service\Store.Service.Tests\bin\Debug\netcoreapp2.0\Store.Service.Tests.pdb
+E:\Repositories\Thesis\Store.Service\Store.Service.Tests\obj\Debug\netcoreapp2.0\Store.Service.Tests.csproj.CoreCompileInputs.cache
+E:\Repositories\Thesis\Store.Service\Store.Service.Tests\obj\Debug\netcoreapp2.0\Store.Service.Tests.AssemblyInfoInputs.cache
+E:\Repositories\Thesis\Store.Service\Store.Service.Tests\obj\Debug\netcoreapp2.0\Store.Service.Tests.AssemblyInfo.cs
+E:\Repositories\Thesis\Store.Service\Store.Service.Tests\obj\Debug\netcoreapp2.0\Store.Service.Tests.dll
+E:\Repositories\Thesis\Store.Service\Store.Service.Tests\obj\Debug\netcoreapp2.0\Store.Service.Tests.pdb

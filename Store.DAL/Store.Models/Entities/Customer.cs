@@ -16,9 +16,6 @@ namespace Store.Models.Entities
         [EmailAddress]
         [DataType(DataType.EmailAddress), MaxLength(50), Display(Name = "Email Address")]
         public string EmailAddress { get; set; }
-        [Required]
-        [DataType(DataType.Password), MaxLength(50)]
-        public string Password { get; set; }
         [InverseProperty(nameof(Order.Customer))]
         public List<Order> Orders { get; set; } = new List<Order>();
         [InverseProperty(nameof(ShoppingCartRecord.Customer))]

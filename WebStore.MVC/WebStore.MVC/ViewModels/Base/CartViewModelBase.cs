@@ -14,7 +14,6 @@ namespace WebStore.MVC.ViewModels.Base
         [DataType(DataType.Currency), Display(Name = "Total")]
         public decimal LineItemTotal { get; set; }
         public string TimeStampString =>
-        TimeStamp != null ? JsonConvert.SerializeObject(TimeStamp).Replace("\"", "") : string.
-        Empty;
+            TimeStamp != null ? JsonConvert.SerializeObject(TimeStamp).Replace("\"", "") : string.Empty;
     }
 }

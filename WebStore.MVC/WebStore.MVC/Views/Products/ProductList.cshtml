@@ -13,13 +13,20 @@
 <h3>@ViewBag.Header</h3>
 @if (ViewBag.IsAdmin == true)
 {
-    <Button class="btn btn-primary btn-large btnCustom5" id="add">Add</Button>
+    <a asp-controller="Products" asp-action="Add" class="btn btn-primary btn-sm">
+        Add
+    </a>
 }
-<div class="row">
-    @for (int x = 0; x < Model.Count(); x++)
-    {
-        var item = Model.ElementAt(x);
-        @Html.DisplayFor(model => item)
-    }
-</div>
+    <div class="row">
+        @for (int x = 0; x < Model.Count(); x++)
+        {
+            var item = Model.ElementAt(x);
+            @Html.DisplayFor(model => item)
+            if (ViewBag.IsAdmin == true)
+            {
+                @Html.Partial("Update", item)
+                <hr />
+            }
+        }
+    </div>
 

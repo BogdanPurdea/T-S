@@ -1,9 +1,9 @@
 E:\Repositories\Thesis\Store.DAL\Store.Models\bin\Debug\netcoreapp2.0\Store.Models.deps.json
 E:\Repositories\Thesis\Store.DAL\Store.Models\bin\Debug\netcoreapp2.0\Store.Models.dll
+E:\Repositories\Thesis\Store.DAL\Store.Models\bin\Debug\netcoreapp2.0\Store.Models.pdb
 E:\Repositories\Thesis\Store.DAL\Store.Models\obj\Debug\netcoreapp2.0\Store.Models.csprojAssemblyReference.cache
 E:\Repositories\Thesis\Store.DAL\Store.Models\obj\Debug\netcoreapp2.0\Store.Models.csproj.CoreCompileInputs.cache
 E:\Repositories\Thesis\Store.DAL\Store.Models\obj\Debug\netcoreapp2.0\Store.Models.AssemblyInfoInputs.cache
 E:\Repositories\Thesis\Store.DAL\Store.Models\obj\Debug\netcoreapp2.0\Store.Models.AssemblyInfo.cs
-E:\Repositories\Thesis\Store.DAL\Store.Models\bin\Debug\netcoreapp2.0\Store.Models.pdb
 E:\Repositories\Thesis\Store.DAL\Store.Models\obj\Debug\netcoreapp2.0\Store.Models.dll
 E:\Repositories\Thesis\Store.DAL\Store.Models\obj\Debug\netcoreapp2.0\Store.Models.pdb

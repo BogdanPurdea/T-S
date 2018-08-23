@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Store.DAL.Repos.Interfaces;
+using Store.Models.Entities;
 
 namespace Store.Service.Controllers
 {
@@ -29,9 +30,13 @@ namespace Store.Service.Controllers
             : new ObjectResult(orderWithDetails);
         }
         [HttpPut("{orderId}")] //Required even if method name starts with Put
-        public IActionResult UpdateAddressAndPhone(int customerId, int orderId, string billingAddress, string shippingAddress, string phone)
+        public IActionResult Update([FromBody] Order order)
         {
-            Repo.UpdateAddressAndPhone(orderId, billingAddress, shippingAddress, phone);
+            if (order == null || !ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+            Repo.Update(order);
             return NoContent();
         }
     }

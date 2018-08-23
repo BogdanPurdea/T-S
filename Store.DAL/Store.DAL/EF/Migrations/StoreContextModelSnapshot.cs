@@ -50,10 +50,6 @@ namespace Store.DAL.EF.Migrations
                     b.Property<string>("FullName")
                         .HasMaxLength(50);
 
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasMaxLength(50);
-
                     b.Property<byte[]>("TimeStamp")
                         .IsConcurrencyToken()
                         .ValueGeneratedOnAddOrUpdate();
@@ -75,11 +71,13 @@ namespace Store.DAL.EF.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("BillingAddress");
+                    b.Property<string>("BillingAddress")
+                        .HasMaxLength(150);
 
                     b.Property<int>("CustomerId");
 
-                    b.Property<string>("CustomerPhone");
+                    b.Property<string>("CustomerPhone")
+                        .HasMaxLength(15);
 
                     b.Property<DateTime>("OrderDate")
                         .ValueGeneratedOnAdd()
@@ -96,7 +94,8 @@ namespace Store.DAL.EF.Migrations
                         .HasColumnType("datetime")
                         .HasDefaultValueSql("getdate()");
 
-                    b.Property<string>("ShippingAddress");
+                    b.Property<string>("ShippingAddress")
+                        .HasMaxLength(150);
 
                     b.Property<byte[]>("TimeStamp")
                         .IsConcurrencyToken()
@@ -154,7 +153,7 @@ namespace Store.DAL.EF.Migrations
                         .HasColumnType("money");
 
                     b.Property<string>("Description")
-                        .HasMaxLength(3800);
+                        .HasMaxLength(1000);
 
                     b.Property<bool>("IsFeatured");
 

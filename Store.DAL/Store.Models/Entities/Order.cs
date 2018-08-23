@@ -19,8 +19,11 @@ namespace Store.Models.Entities
         public DateTime ShipDate { get; set; }
         [ForeignKey("CustomerId")]
         public Customer Customer { get; set; }
+        [MaxLength(150)]
         public string BillingAddress { get; set; }
+        [MaxLength(150)]
         public string ShippingAddress { get; set; }
+        [MaxLength(15)]
         public string CustomerPhone { get; set; }
         [InverseProperty("Order")]
         public List<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();

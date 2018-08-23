@@ -41,7 +41,7 @@ namespace WebStore.MVC.Controllers
         {
             try
             {
-                await _webApiCalls.UpdateOrderAddressAndPhone(id, billingAddress, shippingAddress, phone);
+                await _webApiCalls.UpdateOrderAddressAndPhone(customerId, id, billingAddress, shippingAddress, phone);
                 OrderWithDetailsAndProductInfo orderDetails =
                     await _webApiCalls.GetOrderDetailsAsync(customerId, id);
                 return RedirectToAction(nameof(Details), new { customerId, id });

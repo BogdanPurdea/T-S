@@ -115,7 +115,8 @@ namespace Store.DAL.Repos.Base
                 }
                 throw new Exception("Unable to delete due to concurrency violation.");
             }
-            Db.Entry(new T { Id = id, TimeStamp = timeStamp }).State = EntityState.Deleted;
+            Db.Entry(new T { Id = id, TimeStamp = timeStamp }).State = 
+                EntityState.Deleted;
             return persist ? SaveChanges() : 0;
         }
         public T Find(int? id) => Table.Find(id);

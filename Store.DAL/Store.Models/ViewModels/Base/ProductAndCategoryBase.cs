@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel.DataAnnotations;
 using Store.Models.Entities.Base;
+using Newtonsoft.Json;
 
 namespace Store.Models.ViewModels.Base
 {
@@ -34,5 +35,7 @@ namespace Store.Models.ViewModels.Base
         public decimal CurrentPrice { get; set; }
         [Display(Name = "In Stock")]
         public int UnitsInStock { get; set; }
+        public string TimeStampString =>
+             TimeStamp != null ? JsonConvert.SerializeObject(TimeStamp).Replace("\"", "") : string.Empty;
     }
 }

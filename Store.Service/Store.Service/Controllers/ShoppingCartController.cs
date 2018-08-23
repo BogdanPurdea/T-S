@@ -20,10 +20,12 @@ namespace Store.Service.Controllers
         }
 
         [HttpGet("{productId}")]
-        public CartRecordWithProductInfo GetShoppingCartRecord(int customerId, int productId) => Repo.GetShoppingCartRecord(customerId, productId);
+        public CartRecordWithProductInfo GetShoppingCartRecord(int customerId, int productId)
+            => Repo.GetShoppingCartRecord(customerId, productId);
 
         [HttpGet(Name = "GetShoppingCart")]
-        public IEnumerable<CartRecordWithProductInfo> GetShoppingCart(int customerId) => Repo.GetShoppingCartRecords(customerId);
+        public IEnumerable<CartRecordWithProductInfo> GetShoppingCart(int customerId)
+            => Repo.GetShoppingCartRecords(customerId);
 
 
         //public IActionResult Create(int customerId, [FromBody] ShoppingCartRecord item)
@@ -37,7 +39,7 @@ namespace Store.Service.Controllers
             item.DateCreated = DateTime.Now;
             item.CustomerId = customerId;
             Repo.Add(item);
-            //Location: http://localhost:8477/api/ShoppingCart/0 (201)
+            //Location: http://localhost:61855/api/ShoppingCart/0 (201)
             return CreatedAtRoute("GetShoppingCart",
                 new { controller = "ShoppingCart", customerId = customerId });
         }
@@ -51,7 +53,7 @@ namespace Store.Service.Controllers
             }
             item.DateCreated = DateTime.Now;
             Repo.Update(item);
-            //Location: http://localhost:8477/api/ShoppingCart/0 (201)
+            //Location: http://localhost:61855/api/ShoppingCart/0 (201)
             return CreatedAtRoute("GetShoppingCart", new { customerId = customerId });
         }
 
@@ -77,8 +79,9 @@ namespace Store.Service.Controllers
             }
             int orderId;
             orderId = Repo.Purchase(customerId);
-            //Location: http://localhost:8477/api/Orders/0/1
-            return CreatedAtRoute("GetOrderDetails", routeValues: new { customerId = customerId, orderId = orderId }, value: orderId);
+            //Location: http://localhost:61855/api/Orders/0/1
+            return CreatedAtRoute("GetOrderDetails", routeValues: 
+                new { customerId = customerId, orderId = orderId }, value: orderId);
         }
     }
 }

@@ -701,9 +701,8 @@ namespace Store.DAL.Initializers
         {
             new Customer()
             {
-                EmailAddress = "spy@secrets.com",
-                Password = "Foo",
-                FullName = "Super Spy",
+                EmailAddress = "a@nonymous.com",
+                FullName = "anonymous",
             }
         };
 
