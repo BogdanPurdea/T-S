@@ -1,10 +1,4 @@
 ﻿@model OrderWithDetailsAndProductInfo
 
-@if (Model.BillingAddress == null || Model.ShippingAddress == null)
-{
-    @Html.EditorForModel()
-}
-else
-{
-    @Html.DisplayForModel()
-}
+@Html.EditorForModel()
+@Html.DisplayForModel()

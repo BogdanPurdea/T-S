@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WebStore.MVC.Configuration.WebServiceLocator">
+    <Position X="3.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Configuration\WebServiceLocator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WebStore.MVC.WebServiceAccess.Base.WebApiCallsBase">
+    <Position X="3.25" Y="2.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>gAAAgAEAAQEAAAAAAAAJAABEAABAAAAAIAAAAAgQAIA=</HashCode>
+      <FileName>WebServiceAccess\Base\WebApiCallsBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebStore.MVC.WebServiceAccess.WebApiCalls">
+    <Position X="0.5" Y="2.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>EACsAEAAJBAABIAAAAAAAAAaQBAAAAAAAAAEBAAAgAA=</HashCode>
+      <FileName>WebServiceAccess\WebApiCalls.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WebStore.MVC.Controllers.AccountController">
+    <Position X="6.25" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AQAABAAjIACAAAIAAAFAEgIAJACBAIABAgERAAAgAAA=</HashCode>
+      <FileName>Controllers\AccountController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebStore.MVC.Controllers.CartController">
+    <Position X="9.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYIAAAAAAAAAAAAAAAQAAAAAAEAAAAAAAMAAAAAACA=</HashCode>
+      <FileName>Controllers\CartController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebStore.MVC.Controllers.ProductsController">
+    <Position X="11" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAYABAAAAAQBAQAAAAAAAAAAAAEAAAAAgAMAAAAgEAA=</HashCode>
+      <FileName>Controllers\ProductsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebStore.MVC.Controllers.OrdersController">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAA=</HashCode>
+      <FileName>Controllers\OrdersController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebStore.MVC.Filters.CustomerFilter">
+    <Position X="11" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAASAAAIAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Filters\CustomerFilter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="WebStore.MVC.Configuration.IWebServiceLocator" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Configuration\IWebServiceLocator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WebStore.MVC.WebServiceAccess.Base.IWebApiCalls" Collapsed="true">
+    <Position X="0.5" Y="1.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EACsAEAAJBAABIAAAAAAAAAaQBAAAAAAAAAEBAAAgAA=</HashCode>
+      <FileName>WebServiceAccess\Base\IWebApiCalls.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

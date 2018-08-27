@@ -37,10 +37,9 @@ namespace WebStore.MVC.Filters
             else
             {
                 viewBag.UserId = null;
-                viewBag.CustomerId = 1;
+                viewBag.CustomerId = 0;
                 viewBag.CustomerName = "Anonymous";
             }
-              
         }
 
         public void OnActionExecuted(ActionExecutedContext context)

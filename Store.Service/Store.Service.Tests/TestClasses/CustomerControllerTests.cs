@@ -41,7 +41,7 @@ namespace Store.Service.Tests.TestClasses
                 Assert.True(response.IsSuccessStatusCode);
                 var jsonResponse = await response.Content.ReadAsStringAsync();
                 var customer = JsonConvert.DeserializeObject<Customer>(jsonResponse);
-                Assert.Equal("Super Spy",customer.FullName);
+                Assert.Equal("anonymous",customer.FullName);
             }
         }
 

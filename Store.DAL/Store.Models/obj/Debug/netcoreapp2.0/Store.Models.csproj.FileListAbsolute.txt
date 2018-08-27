@@ -7,3 +7,5 @@ E:\Repositories\Thesis\Store.DAL\Store.Models\obj\Debug\netcoreapp2.0\Store.Mode
 E:\Repositories\Thesis\Store.DAL\Store.Models\obj\Debug\netcoreapp2.0\Store.Models.AssemblyInfo.cs
 E:\Repositories\Thesis\Store.DAL\Store.Models\obj\Debug\netcoreapp2.0\Store.Models.dll
 E:\Repositories\Thesis\Store.DAL\Store.Models\obj\Debug\netcoreapp2.0\Store.Models.pdb
+E:\Repositories\Thesis\Store.DAL\Store.Models\bin\Debug\netcoreapp2.0\Store.Models.runtimeconfig.json
+E:\Repositories\Thesis\Store.DAL\Store.Models\bin\Debug\netcoreapp2.0\Store.Models.runtimeconfig.dev.json

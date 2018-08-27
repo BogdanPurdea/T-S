@@ -62,7 +62,7 @@ namespace Store.Service.Tests.TestClasses
                 Assert.Equal(HttpStatusCode.NotFound,response.StatusCode);
             }
         }
-        [Fact]
+        /*[Fact]
         public async void ShouldAddProduct()
         {
             // Add product: http://localhost:61855/api/product HTTPPost
@@ -104,6 +104,6 @@ namespace Store.Service.Tests.TestClasses
             Assert.Equal(10, product.CurrentPrice);
             Assert.Equal(3, product.UnitsInStock);
             Assert.True(product.IsFeatured);
-        }
+        }*/
     }
 }

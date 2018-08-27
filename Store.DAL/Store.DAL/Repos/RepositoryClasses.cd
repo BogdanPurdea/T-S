@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Store.DAL.Repos.Base.RepoBase&lt;T&gt;">
+    <Position X="6" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>gAYAAAAAAiAEAEAAEAgAQAQAAAEIAAAgAggAAQIEAAA=</HashCode>
+      <FileName>Repos\Base\RepoBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Store.DAL.Repos.CategoryRepo">
+    <Position X="0.5" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAggAAAAAAAA=</HashCode>
+      <FileName>Repos\CategoryRepo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Store.DAL.Repos.ProductRepo">
+    <Position X="0.5" Y="3" Width="5" />
+    <TypeIdentifier>
+      <HashCode>CAAAABBAAAAAAAAQAAAAAAAAAAAIAAAAAgAAAAAgAAA=</HashCode>
+      <FileName>Repos\ProductRepo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Store.DAL.Repos.CustomerRepo">
+    <Position X="10.75" Y="7.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEggAAAAAAAA=</HashCode>
+      <FileName>Repos\CustomerRepo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Store.DAL.Repos.OrderDetailRepo">
+    <Position X="5" Y="7" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAAggAAAAAEAA=</HashCode>
+      <FileName>Repos\OrderDetailRepo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Store.DAL.Repos.OrderRepo">
+    <Position X="0.5" Y="7" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAQAAgAAAAAAAAAIAAAAggAAAAAAAA=</HashCode>
+      <FileName>Repos\OrderRepo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Store.DAL.Repos.Base.IRepo&lt;T&gt;">
+    <Position X="10" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>gAYAAAAAAAAAAEAAAAAAAAQAAAEIAAAgAggAAQIEAAA=</HashCode>
+      <FileName>Repos\Base\IRepo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Store.DAL.Repos.Interfaces.ICategoryRepo">
+    <Position X="12.75" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repos\Interfaces\ICategoryRepo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Store.DAL.Repos.Interfaces.IProductRepo">
+    <Position X="12.75" Y="2.25" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAABAAAAAAAAAQAAAAAAAAAAAIAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Repos\Interfaces\IProductRepo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Store.DAL.Repos.Interfaces.IOrderRepo">
+    <Position X="9.5" Y="4.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAgAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repos\Interfaces\IOrderRepo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Store.DAL.Repos.Interfaces.IOrderDetailRepo">
+    <Position X="13.25" Y="4.75" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Repos\Interfaces\IOrderDetailRepo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Store.DAL.Repos.Interfaces.ICustomerRepo">
+    <Position X="16" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Repos\Interfaces\ICustomerRepo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

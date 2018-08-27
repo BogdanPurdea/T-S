@@ -11,3 +11,4 @@ E:\Repositories\Thesis\Store.Service\Store.Service.Tests\obj\Debug\netcoreapp2.0
 E:\Repositories\Thesis\Store.Service\Store.Service.Tests\obj\Debug\netcoreapp2.0\Store.Service.Tests.AssemblyInfo.cs
 E:\Repositories\Thesis\Store.Service\Store.Service.Tests\obj\Debug\netcoreapp2.0\Store.Service.Tests.dll
 E:\Repositories\Thesis\Store.Service\Store.Service.Tests\obj\Debug\netcoreapp2.0\Store.Service.Tests.pdb
+E:\Repositories\Thesis\Store.Service\Store.Service.Tests\obj\Debug\netcoreapp2.0\Store.Service.Tests.csprojAssemblyReference.cache

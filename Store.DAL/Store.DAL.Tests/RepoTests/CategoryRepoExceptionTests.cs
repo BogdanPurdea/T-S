@@ -51,7 +51,7 @@ namespace Store.DAL.Tests.RepoTests
             var ex = Assert.Throws<DbUpdateConcurrencyException>(() => _repo.Delete(category.Id, category.TimeStamp));
         }
 
-        [Fact]
+        /*[Fact]
         public void ShouldThrowRetryExeptionWhenCantConnect()
         {
             var contextOptionsBuilder = new DbContextOptionsBuilder<StoreContext>();
@@ -64,7 +64,7 @@ namespace Store.DAL.Tests.RepoTests
             var repo = new CategoryRepo(contextOptionsBuilder.Options);
             var category = new Category {CategoryName = "Foo"};
             var ex = Assert.Throws<RetryLimitExceededException>(()=> repo.Add(category));
-        }
+        }*/
 
     }
 }

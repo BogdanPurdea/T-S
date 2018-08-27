@@ -51,8 +51,7 @@ namespace WebStore.MVC.WebServiceAccess.Base
             }
         }
 
-        internal async Task<T> GetItemAsync<T>(string uri) 
-            where T : class, new()
+        internal async Task<T> GetItemAsync<T>(string uri) where T : class, new()
         {
             try
             {

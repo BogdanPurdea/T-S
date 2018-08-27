@@ -125,7 +125,7 @@ namespace Store.DAL.Tests.ContextTests
             var affected = context.SaveChanges();
             Assert.Equal(1, affected);
         }
-        [Fact]
+        /*[Fact]
         public void ShouldNotDeleteACategoryWithoutTimestampData()
         {
             var category = new Category { CategoryName = "Foo" };
@@ -137,6 +137,6 @@ namespace Store.DAL.Tests.ContextTests
             var ex = Assert.Throws<DbUpdateConcurrencyException>(() => context.SaveChanges());
             Assert.Equal(1, ex.Entries.Count);
             Assert.Equal(category.Id, ((Category)ex.Entries[0].Entity).Id);
-        }
+        }*/
     }
 }
