@@ -87,7 +87,13 @@ namespace WebStore.MVC.WebServiceAccess
         {
             //Get One customer: http://localhost:44315/api/customer/{userId}
             //http://localhost:44315/api/customer/0b79191b-b587-405c-ae2a-e51a
-            return await GetItemAsync<Customer>($"{CustomerBaseUri}{userId}");
+            return await GetItemAsync<Customer>($"{CustomerBaseUri}/ByUser/{userId}");
+        }
+        public async Task<string> AddCustomerAsync(string fullName, string emailAddress, string userId)
+        {
+            string uri = $"{CustomerBaseUri}";
+            string json = $"{{\"FullName\":\"{fullName}\",\"EmailAddress\":\"{emailAddress}\",\"UserId\":\"{userId}\"}}";
+            return await SubmitPostRequestAsync(uri, json);
         }
         public async Task<IList<ProductAndCategoryBase>> GetFeaturedProductsAsync()
         {

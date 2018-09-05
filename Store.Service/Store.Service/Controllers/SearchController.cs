@@ -18,6 +18,6 @@ namespace Store.Service.Controllers
         }
         [HttpGet("{searchString}", Name = "SearchProducts")]
         public IEnumerable<ProductAndCategoryBase> Search(string searchString)
-        => Repo.Search(searchString);
+            => Repo.Search(searchString);
     }
 }

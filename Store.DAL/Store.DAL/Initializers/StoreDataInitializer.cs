@@ -65,17 +65,6 @@ namespace Store.DAL.Initializers
                     context.SaveChanges();
                 }
                 var customer = context.Customers.FirstOrDefault();
-                if (!context.Orders.Any())
-                {
-                    context.Orders.AddRange(StoreSampleData.GetOrders(customer, context));
-                    context.SaveChanges();
-                }
-                if (!context.ShoppingCartRecords.Any())
-                {
-                    context.ShoppingCartRecords.AddRange(
-                        StoreSampleData.GetCart(customer, context));
-                    context.SaveChanges();
-                }
             }
             catch (Exception ex)
             {

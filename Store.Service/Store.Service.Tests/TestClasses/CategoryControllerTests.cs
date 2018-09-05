@@ -26,8 +26,9 @@ namespace Store.Service.Tests.TestClasses
                 var response = await client.GetAsync($"{ServiceAddress}{RootAddress}");
                 Assert.True(response.IsSuccessStatusCode);
                 var jsonResponse = await response.Content.ReadAsStringAsync();
-                var cats = JsonConvert.DeserializeObject<List<Category>>(jsonResponse);
-                Assert.Equal(7,cats.Count);
+                var categories = JsonConvert
+                    .DeserializeObject<List<Category>>(jsonResponse);
+                Assert.Equal(7, categories.Count);
             }
         }
         [Theory]

@@ -28,8 +28,7 @@ namespace Store.Service.Controllers
             => Repo.GetShoppingCartRecords(customerId);
 
 
-        //public IActionResult Create(int customerId, [FromBody] ShoppingCartRecord item)
-        [HttpPost] //required even if method name starts with "Post"
+        [HttpPost]
         public IActionResult Create(int customerId, [FromBody]ShoppingCartRecord item)
         {
             if (item == null || !ModelState.IsValid)
@@ -44,7 +43,7 @@ namespace Store.Service.Controllers
                 new { controller = "ShoppingCart", customerId = customerId });
         }
 
-        [HttpPut("{shoppingCartRecordId}")] //Required even if method name starts with Put
+        [HttpPut("{shoppingCartRecordId}")]
         public IActionResult Update(int customerId, int shoppingCartRecordId, [FromBody] ShoppingCartRecord item)
         {
             if (item == null || item.Id != shoppingCartRecordId || !ModelState.IsValid)
@@ -57,7 +56,7 @@ namespace Store.Service.Controllers
             return CreatedAtRoute("GetShoppingCart", new { customerId = customerId });
         }
 
-        [HttpDelete("{shoppingCartRecordId}/{timeStamp}")] //Required even if method name starts with Delete
+        [HttpDelete("{shoppingCartRecordId}/{timeStamp}")]
         public IActionResult Delete(int customerId, int shoppingCartRecordId, string timeStamp)
         {
             if (!timeStamp.StartsWith("\""))
@@ -69,7 +68,7 @@ namespace Store.Service.Controllers
             return NoContent();
         }
 
-        [HttpPost("buy")] //required even if method name starts with "Post"
+        [HttpPost("buy")]
         public IActionResult Purchase(int customerId, [FromBody] Customer customer)
         {
 

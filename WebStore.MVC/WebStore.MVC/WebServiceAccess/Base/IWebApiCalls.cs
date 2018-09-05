@@ -16,6 +16,7 @@ namespace WebStore.MVC.WebServiceAccess.Base
         Task<IList<Customer>> GetCustomersAsync();
         Task<Customer> GetCustomerAsync(int id);
         Task<Customer> GetCustomerAsync(string userId);
+        Task<string> AddCustomerAsync(string fullName, string emailAddress, string userId);
         Task<IList<Order>> GetOrdersAsync(int customerId);
         Task<OrderWithDetailsAndProductInfo> GetOrderDetailsAsync(int customerId, int orderId);
         Task<string> UpdateOrderAddressAndPhone(int customerId, int orderId, string billingAddress, string shippingAddress, string phone);

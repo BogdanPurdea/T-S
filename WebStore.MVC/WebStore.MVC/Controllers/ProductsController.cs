@@ -109,6 +109,15 @@ namespace WebStore.MVC.Controllers
         [HttpPost("{searchString}")]
         public async Task<IActionResult> Search(string searchString)
         {
+            ViewBag.IsAdmin = false;
+            var userId = ViewBag.UserId;
+            if (userId != null)
+            {
+                var user = await _userManager.FindByIdAsync(userId);
+                var roles = await _userManager.GetRolesAsync(user);
+                if (roles[0] == "Admin")
+                    ViewBag.IsAdmin = true;
+            }
             ViewBag.Title = "Search Results";
             ViewBag.Header = "Search Results";
             ViewBag.ShowCategory = true;

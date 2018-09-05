@@ -65,8 +65,8 @@ namespace Store.DAL.Repos
                 .SingleOrDefault();
         public IEnumerable<ProductAndCategoryBase> Search(string searchString)
             => Table
-                .Where(p => p.Description.ToLower().Contains(searchString.ToLower())
-                || p.ModelName.ToLower().Contains(searchString.ToLower()))
+                .Where(p => p.ModelName.ToLower().Contains(searchString.ToLower())
+                || p.ModelNumber.ToLower().Contains(searchString.ToLower()))
                 .Include(p => p.Category)
                 .Select(item => GetRecord(item, item.Category))
                 .OrderBy(x => x.ModelName);

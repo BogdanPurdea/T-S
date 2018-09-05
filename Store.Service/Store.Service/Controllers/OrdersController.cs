@@ -29,7 +29,7 @@ namespace Store.Service.Controllers
             return orderWithDetails == null ? (IActionResult)NotFound()
             : new ObjectResult(orderWithDetails);
         }
-        [HttpPut("{orderId}")] //Required even if method name starts with Put
+        [HttpPut("{orderId}")]
         public IActionResult Update([FromBody] Order order)
         {
             if (order == null || !ModelState.IsValid)

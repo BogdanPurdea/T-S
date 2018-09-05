@@ -3123,7 +3123,7 @@
           "lib/netstandard1.5/StackExchange.Redis.StrongName.dll": {}
         }
       },
-      "Store.DAL/8.0.0": {
+      "Store.DAL/10.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "2.1.1",
@@ -3134,7 +3134,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.1.6",
           "Microsoft.EntityFrameworkCore.Tools": "2.1.1",
           "Microsoft.NETCore.App": "2.0.0",
-          "Store.Models": "8.0.0",
+          "Store.Models": "10.0.0",
           "System.Linq.Queryable": "4.3.0"
         },
         "compile": {
@@ -3144,7 +3144,7 @@
           "lib/netcoreapp2.0/Store.DAL.dll": {}
         }
       },
-      "Store.Models/8.0.0": {
+      "Store.Models/10.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "2.1.1",
@@ -8163,24 +8163,24 @@
         "stackexchange.redis.strongname.nuspec"
       ]
     },
-    "Store.DAL/8.0.0": {
-      "sha512": "uPfNPExCata4qgvyAOdUr288M3bbgbnW0ZGpMdL9lDc1Emb9Z7j59h79MsS5tP8jHDIhV7S4cz9lLQe2VR6OZw==",
+    "Store.DAL/10.0.0": {
+      "sha512": "n9GXWDP2xLTEAg43sikTCip1Bwv5u7dhSRe1sJ9ERpcJekCzbfXHhz0J+dfL0elwDW3LpP75MpYBGOnLRa0OoA==",
       "type": "package",
-      "path": "store.dal/8.0.0",
+      "path": "store.dal/10.0.0",
       "files": [
         "lib/netcoreapp2.0/Store.DAL.dll",
         "lib/netcoreapp2.0/Store.DAL.runtimeconfig.json",
-        "store.dal.8.0.0.nupkg.sha512",
+        "store.dal.10.0.0.nupkg.sha512",
         "store.dal.nuspec"
       ]
     },
-    "Store.Models/8.0.0": {
-      "sha512": "LMeO/SeuH96IQHSTXoww8I96XhKTVfjJa4rqMKun2GrBxuKI8f960aN1NBNCjZROWjLVQiv+TcCvKsYaxOjq2g==",
+    "Store.Models/10.0.0": {
+      "sha512": "g/8DTJB6/fLLSbllBVGUa3Y4OMm1KHRhTPPzhBqgypbNKRDXm/WlN5t/JHriTBf9AXmspAgl5ExS0jI3rL8Hjw==",
       "type": "package",
-      "path": "store.models/8.0.0",
+      "path": "store.models/10.0.0",
       "files": [
         "lib/netcoreapp2.0/Store.Models.dll",
-        "store.models.8.0.0.nupkg.sha512",
+        "store.models.10.0.0.nupkg.sha512",
         "store.models.nuspec"
       ]
     },
@@ -12616,8 +12616,8 @@
       "Microsoft.EntityFrameworkCore >= 2.1.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.1.1",
       "Microsoft.NETCore.App >= 2.0.0",
-      "Store.DAL >= 8.0.0",
-      "Store.Models >= 8.0.0"
+      "Store.DAL >= 10.0.0",
+      "Store.Models >= 10.0.0"
     ]
   },
   "packageFolders": {
@@ -12681,11 +12681,11 @@
           },
           "Store.DAL": {
             "target": "Package",
-            "version": "[8.0.0, )"
+            "version": "[10.0.0, )"
           },
           "Store.Models": {
             "target": "Package",
-            "version": "[8.0.0, )"
+            "version": "[10.0.0, )"
           }
         },
         "imports": [

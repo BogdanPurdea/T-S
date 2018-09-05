@@ -986,7 +986,7 @@
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
       },
-      "Store.Models/1.0.0": {
+      "Store.Models/10.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
@@ -3685,7 +3685,7 @@
         "system.threading.tasks.nuspec"
       ]
     },
-    "Store.Models/1.0.0": {
+    "Store.Models/10.0.0": {
       "type": "project",
       "path": "../Store.Models/Store.Models.csproj",
       "msbuildProject": "../Store.Models/Store.Models.csproj"
@@ -3701,7 +3701,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer.Design >= 1.1.6",
       "Microsoft.EntityFrameworkCore.Tools >= 2.1.1",
       "Microsoft.NETCore.App >= 2.0.0",
-      "Store.Models >= 1.0.0",
+      "Store.Models >= 10.0.0",
       "System.Linq.Queryable >= 4.3.0"
     ]
   },
@@ -3710,7 +3710,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "10.0.0",
     "restore": {
       "projectUniqueName": "E:\\Repositories\\Thesis\\Store.DAL\\Store.DAL\\Store.DAL.csproj",
       "projectName": "Store.DAL",

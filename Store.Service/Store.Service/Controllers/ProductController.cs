@@ -35,7 +35,7 @@ namespace Store.Service.Controllers
         public IEnumerable<ProductAndCategoryBase> GetFeatured()
             => Repo.GetFeaturedWithCategoryName().ToList();
 
-        [HttpPost] //required even if method name starts with "Post"
+        [HttpPost]
         public IActionResult Create([FromBody]Product product)
         {
             if (product == null || !ModelState.IsValid)
@@ -46,7 +46,7 @@ namespace Store.Service.Controllers
             Repo.Add(product);
             return NoContent();
         }
-        [HttpPut("{productId}")] //Required even if method name starts with Put
+        [HttpPut("{productId}")]
         public IActionResult Update(int productId, [FromBody] Product item)
         {
             if (item == null || item.Id != productId || !ModelState.IsValid)
@@ -57,7 +57,7 @@ namespace Store.Service.Controllers
             return NoContent();
         }
 
-        [HttpDelete("{productId}/{timeStamp}")] //Required even if method name starts with Delete
+        [HttpDelete("{productId}/{timeStamp}")]
         public IActionResult Delete(int productId, string timeStamp)
         {
             if (!timeStamp.StartsWith("\""))

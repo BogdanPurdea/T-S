@@ -31,8 +31,16 @@ namespace WebStore.MVC.Filters
                 var user = _userHelper.FindByName(userName);
                 var customer = _customerHelper.GetCustomerInfo(user.Id);
                 viewBag.UserId = user.Id;
-                viewBag.CustomerId = customer.Id;
-                viewBag.CustomerName = customer.FullName;
+                if (customer != null)
+                {
+                    viewBag.CustomerId = customer.Id;
+                    viewBag.CustomerName = customer.FullName;
+                }
+                else
+                {
+                    viewBag.CustomerId = 0;
+                    viewBag.CustomerName = "Anonymous";
+                }
             }
             else
             {

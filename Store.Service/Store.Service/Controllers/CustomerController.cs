@@ -31,15 +31,24 @@ namespace Store.Service.Controllers
             return new ObjectResult(item);
         }
 
-        [HttpGet("{userId}")]
-        public IActionResult Get(string userId)
+        [HttpGet("ByUser/{userId}")]
+        public IActionResult GetByUserId(string userId)
         {
             var item = Repo.FindByUserId(userId);
-            if (item == null)
-            {
-                return NotFound();
-            }
             return new ObjectResult(item);
+        }
+
+        [HttpPost]
+        public IActionResult Create([FromBody]Customer customer)
+        {
+            var model = ModelState;
+            if (customer == null || !ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+            if(Repo.FindByUserId(customer.UserId) == null)
+                Repo.Add(customer);
+            return NoContent();
         }
     }
 }

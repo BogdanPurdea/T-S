@@ -13,6 +13,7 @@ using Microsoft.Extensions.Options;
 using WebStore.MVC.Models;
 using WebStore.MVC.Models.AccountViewModels;
 using WebStore.MVC.Services;
+using WebStore.MVC.WebServiceAccess.Base;
 
 namespace WebStore.MVC.Controllers
 {
@@ -24,17 +25,20 @@ namespace WebStore.MVC.Controllers
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IEmailSender _emailSender;
         private readonly ILogger _logger;
+        private readonly IWebApiCalls _webApiCalls;
 
         public AccountController(
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
             IEmailSender emailSender,
-            ILogger<AccountController> logger)
+            ILogger<AccountController> logger,
+            IWebApiCalls webApiCalls)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _emailSender = emailSender;
             _logger = logger;
+            _webApiCalls = webApiCalls;
         }
 
         [TempData]
@@ -79,6 +83,10 @@ namespace WebStore.MVC.Controllers
                     { 
                         _logger.LogInformation("Admin logged in.");
                         return RedirectToLocal(returnUrl);
+                    }
+                    else
+                    {
+                        await _webApiCalls.AddCustomerAsync(user.UserName, user.Email, user.Id);
                     }
                     return RedirectToLocal(returnUrl);
                 }
@@ -240,7 +248,7 @@ namespace WebStore.MVC.Controllers
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
-
+                    await _userManager.AddToRoleAsync(user, "Customer");
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     var callbackUrl = Url.EmailConfirmationLink(user.Id, code, Request.Scheme);
                     await _emailSender.SendEmailConfirmationAsync(model.Email, callbackUrl);
